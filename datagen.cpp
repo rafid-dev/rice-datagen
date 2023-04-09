@@ -206,7 +206,7 @@ void playGames(int id, int games , int threadcount)
             }
 
             if (id == 0 && !(i % 100)){
-                std::cout << "iter "<< i << ":\t| total games: " << total_games << " | total_fens: " << total_fens << " | speed: " << (total_fens * 1000 / (1 + GetTimeMs() - start_time)) << " fens/s"  << std::endl;
+                std::cout << "iter "<< i << ":\t| total games: " << total_games << " | total_fens: " << total_fens << " | speed: " << (total_fens * 1000 / (1 + GetTimeMs() - start_time)) << " fens/s | " << ((total_fens * 1000 / (1 + GetTimeMs() - start_time))*60) << " fens/m | " << ((total_fens * 1000 / (1 + GetTimeMs() - start_time))*60*10) << " fens/10m | " << ((total_fens * 1000 / (1 + GetTimeMs() - start_time))*60*60) << " fens/hour" << std::endl;
             }
         }
     }else std::cout << "Unable to open file" << std::endl;
